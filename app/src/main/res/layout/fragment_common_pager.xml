@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="mCommonPagerVM"
+            type="com.gatebot.app.ui.common.CommonPagerVM" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:id="@+id/controls_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingStart="@dimen/_15sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/prev"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:tint="@color/colorPrimaryDark"
+                android:alpha="@{mCommonPagerVM.prevActive ? 1.0F : 0.5F}"
+                android:onClick="@{(view) -> mCommonPagerVM.onClickAction(view)}"
+                android:src="@drawable/controls_left_arrow" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/play"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"
+                android:onClick="@{(view) -> mCommonPagerVM.onClickAction(view)}"
+                android:src="@drawable/controls_play" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/next"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:tint="@color/colorPrimaryDark"
+                android:alpha='@{mCommonPagerVM.nextActive ? 1.0F : 0.5F}'
+                android:onClick="@{(view) -> mCommonPagerVM.onClickAction(view)}"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/controls_right_arrow" />
+
+        </RelativeLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/controls_container"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_above="@+id/ad_banner_container"/>
+
+        <LinearLayout
+            android:id="@+id/ad_banner_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:background="@color/colorGreen" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

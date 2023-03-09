@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android App</string>
+    <string name="app_name_text">Android App</string>
+
+    <string name="app_dummy_description">Only valid for in-house guests and guests paying for day access of beach / pool facilities. Only valid for in-house guests and guests paying for day access of beach / pool facilities. Only valid for in-house guests and guests paying for day access of beach / pool facilities.</string>
+    <string name="ok_text">OK</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="mobile_number">Mobile Number</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+
+    <string name="time_ago_suffix">ago</string>
+    <string name="time_ago_seconds">less than a minute</string>
+    <string name="time_ago_minute">a minute</string>
+    <string name="time_ago_minutes">%d minutes</string>
+    <string name="time_ago_hour">an hour</string>
+    <string name="time_ago_hours">%d hours</string>
+    <string name="time_ago_day">a day</string>
+    <string name="time_ago_days">%d days</string>
+    <string name="time_ago_month"> a month</string>
+    <string name="time_ago_months">%d months</string>
+    <string name="time_ago_year"> a year</string>
+    <string name="time_ago_years">%d years</string>
+    <string name="order_no">Order #: </string>
+    <string name="order_status_label">"Status: "</string>
+    <string name="assigned">Assigned</string>
+    <string name="next_day_orders">Next Day Orders</string>
+    <string name="coupon_disount">Coupon Disount</string>
+    <string name="update_date">Move to Next Day</string>
+    <string name="load_sales">Load Sales</string>
+    <string name="from_date">From Date</string>
+    <string name="load">Load</string>
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Username</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_url_hint">Url</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+
+</resources>

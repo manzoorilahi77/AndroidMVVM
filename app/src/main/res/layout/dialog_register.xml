@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_20sdp"
+    android:paddingTop="@dimen/_25sdp">
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/medium_font_style"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:textSize="@dimen/_20sdp"
+        android:text="@string/register_vehicle"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/unit_spinner"
+            style="@style/location_spinner"
+            android:layout_height="@dimen/_30sdp"
+            android:popupBackground="@android:color/transparent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_alignTop="@+id/unit_spinner"
+            android:layout_alignBottom="@+id/unit_spinner"
+            android:layout_alignEnd="@+id/unit_spinner"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/downarrow" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/vehicle_no_ed"
+        android:layout_width="match_parent"
+        android:inputType="textCapWords"
+        android:textAlignment="viewStart"
+        android:textColor="@color/primaryTextColor"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"
+        android:hint="@string/vehicle_no"
+        android:layout_below="@+id/title_tv"
+        android:imeOptions="actionNext"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_height="@dimen/_35sdp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/mobile_no_ed"
+        android:layout_width="match_parent"
+        android:inputType="phone"
+        android:textAlignment="viewStart"
+        android:textColor="@color/primaryTextColor"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:imeOptions="actionDone"
+        android:maxLength="10"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"
+        android:hint="@string/mobile_number"
+        android:layout_height="@dimen/_35sdp"/>
+
+    <LinearLayout
+        android:id="@+id/action_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_slot_ed"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_action_tv"
+            style="@style/light_btn_style"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:textAllCaps="true"
+            android:text="@string/cancel_text"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/vehicle_btn_bg_2"
+            android:textSize="@dimen/_14ssp"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ok_action_tv"
+            style="@style/dark_btn_style"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:background="@drawable/vehicle_btn_bg_1"
+            android:textColor="@color/whiteTextColor"
+            android:textSize="@dimen/_14ssp"
+            android:textAllCaps="true"
+            android:text="@string/save"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+    </LinearLayout>
+
+</LinearLayout>
