@@ -7,7 +7,7 @@
 
         <variable
             name="homeVM"
-            type="com.gatebot.app.ui.home.HomeVM" />
+            type="com.mvvm.app.ui.home.HomeVM" />
 
         <import type="android.view.View" />
     </data>
